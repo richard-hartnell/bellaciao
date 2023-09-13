@@ -27,6 +27,8 @@ html {
     top: 20%;
     left: 15%;
     width: 25vw;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 #hours-splash img {
@@ -44,12 +46,85 @@ html {
     max-width: 25vw;
 }
 
+#menu-splash {
+    position: fixed;
+    top: 40%;
+    left: 65%;
+    width: 25vw;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#menu-splash img {
+    /* position: fixed; */
+    /* top: 20%; */
+    max-width: 100%;
+}
+
+#menu-splash h2 {
+    font-family: 'Fraunces';
+    position: absolute;
+    font-size: 4vw;
+    text-align: center;
+    margin: 25% 25%;
+    max-width: 25vw;
+}
+
+#location-splash {
+    position: fixed;
+    top: 60%;
+    left: 15%;
+    width: 25vw;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#location-splash img {
+    transform: rotate(90deg);
+    max-width: 100%;
+}
+
+#location-splash h2 {
+    font-family: 'Fraunces';
+    position: absolute;
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 46% 20%;
+    transform: translateX(-5%);
+    max-width: 25vw;
+    z-index: 1;
+}
+
+#photos-splash {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    width: 25vw;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#photos-splash img {
+    transform: rotate(90deg);
+    max-width: 100%;
+}
+
+#photos-splash h2 {
+    font-family: 'Fraunces';
+    position: absolute;
+    font-size: 4vw;
+    text-align: center;
+    margin: 25% 25%;
+    max-width: 25vw;
+    z-index: 1;
+}
+
 .gutter-left {
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
-    width: 350px;
+    width: 20vw;
     height: 100%;
     background-color: var(--red);
     background-image:
