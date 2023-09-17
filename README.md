@@ -1,2 +1,2 @@
 # bellaciao
-a friend's website.
+a workspace for bellaciao.bar.
