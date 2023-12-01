@@ -48,9 +48,9 @@ html {
 
 #menu-splash {
     position: fixed;
-    top: 40%;
-    left: 65%;
-    width: 25vw;
+    top: 10%;
+    left: 49%;
+    height: 80%;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
 }
@@ -58,7 +58,7 @@ html {
 #menu-splash img {
     /* position: fixed; */
     /* top: 20%; */
-    max-width: 100%;
+    /* max-width: 200%; */
 }
 
 #menu-splash h2 {
