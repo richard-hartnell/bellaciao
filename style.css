@@ -22,28 +22,50 @@ html {
     margin: auto;
 }
 
-#hours-splash {
-    position: fixed;
-    top: 20%;
-    left: 15%;
-    width: 25vw;
+body {
+    align-self: center;
+    margin: auto;
+    font-family: Helvetica, Arial, sans-serif;
+    /* font-weight: 100; */
+    /* background-color: var(--cream); */
+    width: 700px;
+    background-image: linear-gradient(165deg, var(--green), var(--cream), var(--red));
+}
+
+svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    min-width: 100%;
+    height: 250px;
+    fill: var(--red);
+}
+
+#time-place {
+    position: relative;
+    top: -200px;
+    z-index: 3;
+    width: 15em;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
 }
 
-#hours-splash img {
+#time-place img {
     /* position: fixed; */
     /* top: 20%; */
     max-width: 100%;
 }
 
-#hours-splash h2 {
+#time-place h3 {
     font-family: 'Fraunces';
     position: absolute;
-    font-size: 4vw;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    padding-left: 17%;
+    font-size: 1.2em;
     text-align: center;
-    margin: 25% 25%;
-    max-width: 25vw;
+    margin: 18% auto;
 }
 
 #menu-splash {
@@ -123,8 +145,8 @@ html {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
-    width: 20vw;
+    z-index: -2;
+    width: 450px;
     height: 100%;
     background-color: var(--red);
     background-image:
@@ -140,7 +162,7 @@ html {
     position: absolute;
     right: 0;
     z-index: -1;
-    width: 350px;
+    width: 450px;
     height: 100%;
     background-color: var(--green);
     background-image:
@@ -150,21 +172,6 @@ html {
     linear-gradient(135deg, transparent 75%, #ccc 75%);
     background-size:50px 50px; /* Must be a square */
     background-position:0 0, 26px 0, 25px -24px, 0px 25px; /* Must be half of one side of the square */
-}
-
-body {
-    align-self: center;
-    margin: auto;
-    font-family: Helvetica, Arial, sans-serif;
-    width: 100%;
-    max-width: 1000px;
-    font-weight: 100;
-    /* background-color: var(--cream); */
-    background-image: linear-gradient(165deg, var(--green), var(--cream), var(--red));
-}
-
-main {
-    z-index: 0;
 }
 
 #topbar {
@@ -177,8 +184,20 @@ main {
 }
 
 #toplogo {
-    max-width: 40%;
-    padding: 1% 0 0 1%;
+    position: relative;
+    right: -150%;
+    top: -150px;
+    transform: rotate(-27deg);
+    height: 200%;
+    z-index: 100;
+}
+
+#bg-pizza {
+    position: fixed;
+    width: 30%;
+    top: -5%;
+    right: 0;
+    z-index: 1;
 }
 
 #coming-soon {
