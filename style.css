@@ -26,17 +26,24 @@ body {
     align-self: center;
     margin: auto;
     font-family: Helvetica, Arial, sans-serif;
-    /* font-weight: 100; */
-    /* background-color: var(--cream); */
-    width: 700px;
+}
+
+main {
+
+    max-width: 700px;
+    align-self: center;
+    margin: auto;
+    z-index: 99;
+    height: 100%;
     background-image: linear-gradient(165deg, var(--green), var(--cream), var(--red));
+
 }
 
 svg {
     position: relative;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 0;
     min-width: 100%;
     height: 250px;
     fill: var(--red);
@@ -45,7 +52,7 @@ svg {
 #time-place {
     position: relative;
     top: -200px;
-    z-index: 3;
+    /* z-index: 3; */
     width: 15em;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
@@ -114,7 +121,7 @@ svg {
     margin: 46% 20%;
     transform: translateX(-5%);
     max-width: 25vw;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 #photos-splash {
@@ -138,40 +145,44 @@ svg {
     text-align: center;
     margin: 25% 25%;
     max-width: 25vw;
-    z-index: 1;
+    /* z-index: 1; */
+}
+
+.gutter {
+    position: absolute;
+    top: 0;
+    z-index: -22;
+    background-image:
+    linear-gradient(45deg, #ccc 25%, transparent 25%), 
+    linear-gradient(135deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(135deg, transparent 75%, #ccc 75%);
+    background-size:50px 50px; /* Must be a square */
+    background-position:0 0, 26px 0, 25px -24px, 0px 25px; /* Must be half of one side of the square */    
+    width: 450px;
+    max-width: 40%;
+    height: 100%;
 }
 
 .gutter-left {
-    position: absolute;
     left: 0;
-    top: 0;
-    z-index: -2;
-    width: 450px;
-    height: 100%;
     background-color: var(--red);
-    background-image:
-    linear-gradient(45deg, #ccc 25%, transparent 25%), 
-    linear-gradient(135deg, #ccc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ccc 75%),
-    linear-gradient(135deg, transparent 75%, #ccc 75%);
-    background-size:50px 50px; /* Must be a square */
-    background-position:0 0, 26px 0, 25px -24px, 0px 25px; /* Must be half of one side of the square */
 }
 
 .gutter-right {
-    position: absolute;
     right: 0;
-    z-index: -1;
-    width: 450px;
-    height: 100%;
     background-color: var(--green);
-    background-image:
-    linear-gradient(45deg, #ccc 25%, transparent 25%), 
-    linear-gradient(135deg, #ccc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ccc 75%),
-    linear-gradient(135deg, transparent 75%, #ccc 75%);
-    background-size:50px 50px; /* Must be a square */
-    background-position:0 0, 26px 0, 25px -24px, 0px 25px; /* Must be half of one side of the square */
+}
+
+#toasttab-button, #reservation-button {
+    justify-self: center;
+    height: 1em;
+    border: 2px solid seashell;
+    border-radius: 5%;
+    padding: 1em 0;
+    margin: 2% 0;
+    font-size: 1.5em;
+    white-space: nowrap;
 }
 
 #topbar {
@@ -194,10 +205,11 @@ svg {
 
 #bg-pizza {
     position: fixed;
-    width: 30%;
-    top: -5%;
-    right: 0;
-    z-index: 1;
+    width: 250%;
+    top: -30%;
+    transform: translateX(80%) scale(1.5, 1.5);
+    /* right: 75vw; */
+    z-index: -5;
 }
 
 #coming-soon {
@@ -223,13 +235,12 @@ h3 {
 }
 
 footer {
-    /* display: none; */
-    
-    z-index: -2;
+    display: none;
+    /* z-index: 2; */
     background-color: black;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2%;
+    height: 5%;
 }
