@@ -9,12 +9,13 @@
 
 @font-face {
     font-family: "Fraunces";
-    src: url(Fraunces_72pt-Bold.ttf);
+        src: url("Fraunces_72pt-Bold.ttf") format="ttf";
 }
 
 html, body {
     height: 100%;
     margin: 0;
+    min-width: 700px;
 }
 
 html {
@@ -25,37 +26,56 @@ html {
 body {
     align-self: center;
     margin: auto;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Fraunces';
 }
 
 main {
-
     max-width: 700px;
     align-self: center;
     margin: auto;
-    z-index: 99;
     height: 100%;
     background-image: linear-gradient(165deg, var(--green), var(--cream), var(--red));
-
 }
+
+.frontpage-button {
+    font-family: 'Fraunces';
+}
+
+#toasttab-button {
+    justify-self: center;
+    height: 1em;
+    display: inline-block;
+    transform: translate(22%, -500%);
+    border: 2px solid seashell;
+    border-radius: 5%;
+    padding: 1em 0;
+    margin: 2% 0;
+    font-size: 1.5em;
+    white-space: nowrap;
+}    
 
 svg {
     position: relative;
     top: 0;
     left: 0;
-    z-index: 0;
     min-width: 100%;
     height: 250px;
     fill: var(--red);
+    z-index: 3;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 #time-place {
     position: relative;
     top: -200px;
-    /* z-index: 3; */
     width: 15em;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+    z-index: 5;
 }
 
 #time-place img {
@@ -68,8 +88,9 @@ svg {
     font-family: 'Fraunces';
     position: absolute;
     color: white;
-    text-shadow: 5px 5px 5px black;
-    padding-left: 17%;
+    /* text-shadow: 5px 5px 5px black; */
+    top: -3%;
+    padding-left: 20%;
     font-size: 1.2em;
     text-align: center;
     margin: 18% auto;
@@ -121,7 +142,6 @@ svg {
     margin: 46% 20%;
     transform: translateX(-5%);
     max-width: 25vw;
-    /* z-index: 1; */
 }
 
 #photos-splash {
@@ -145,13 +165,12 @@ svg {
     text-align: center;
     margin: 25% 25%;
     max-width: 25vw;
-    /* z-index: 1; */
 }
 
 .gutter {
     position: absolute;
     top: 0;
-    z-index: -22;
+    z-index: -22; /* this stays */
     background-image:
     linear-gradient(45deg, #ccc 25%, transparent 25%), 
     linear-gradient(135deg, #ccc 25%, transparent 25%),
@@ -172,17 +191,22 @@ svg {
 .gutter-right {
     right: 0;
     background-color: var(--green);
+    stroke: black;
+    stroke-width: 999px;
 }
 
 #toasttab-button, #reservation-button {
     justify-self: center;
     height: 1em;
-    border: 2px solid seashell;
+    border: 2px solid black;
     border-radius: 5%;
+    color: black;
     padding: 1em 0;
     margin: 2% 0;
     font-size: 1.5em;
     white-space: nowrap;
+    margin: 10px;
+    padding: 15px;
 }
 
 #topbar {
@@ -200,16 +224,19 @@ svg {
     top: -150px;
     transform: rotate(-27deg);
     height: 200%;
-    z-index: 100;
+    z-index: 30;
 }
 
 #bg-pizza {
     position: fixed;
-    width: 250%;
-    top: -30%;
-    transform: translateX(80%) scale(1.5, 1.5);
+    height: 700px;
+    width: auto;
+    top: -354px;
+    z-index: 1;
+    transform: translateX(-55%);
+    overflow: clip;
     /* right: 75vw; */
-    z-index: -5;
+    /* z-index: -55; */
 }
 
 #coming-soon {
@@ -219,24 +246,23 @@ svg {
 }
 
 h1 {
-    font-family: Fraunces;
+    font-family: 'Fraunces';
     font-size: 3em;
     line-height: 0.5em;
 }
 
 h2 {
-    font-family: Fraunces;
+    font-family: 'Fraunces';
 }
 
 h3 {
-    font-family: Helvetica;
+    font-family: 'Fraunces';
     font-weight: 100;
     font-size: 0.9em;
 }
 
 footer {
     display: none;
-    /* z-index: 2; */
     background-color: black;
     position: fixed;
     bottom: 0;
