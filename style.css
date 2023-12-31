@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "Fraunces";
-        src: url("Fraunces_72pt-Bold.ttf") format="ttf";
+    src: url("Fraunces_72pt-Bold.ttf") format("truetype");
 }
 
 html, body {
@@ -37,10 +37,6 @@ main {
     background-image: linear-gradient(165deg, var(--green), var(--cream), var(--red));
 }
 
-.frontpage-button {
-    font-family: 'Fraunces';
-}
-
 #toasttab-button {
     justify-self: center;
     height: 1em;
@@ -51,7 +47,7 @@ main {
     padding: 1em 0;
     margin: 2% 0;
     font-size: 1.5em;
-    white-space: nowrap;
+    z-index: 6;
 }    
 
 svg {
@@ -73,24 +69,22 @@ a {
     position: relative;
     top: -200px;
     width: 15em;
+    pointer-events: none;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
-    z-index: 5;
+    z-index: 3;
 }
 
 #time-place img {
-    /* position: fixed; */
-    /* top: 20%; */
     max-width: 100%;
 }
 
 #time-place h3 {
-    font-family: 'Fraunces';
     position: absolute;
     color: white;
-    /* text-shadow: 5px 5px 5px black; */
-    top: -3%;
-    padding-left: 20%;
+    text-shadow: 3px 3px 3px black;
+    top: -4%;
+    padding-left: 18%;
     font-size: 1.2em;
     text-align: center;
     margin: 18% auto;
@@ -103,12 +97,6 @@ a {
     height: 80%;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
-}
-
-#menu-splash img {
-    /* position: fixed; */
-    /* top: 20%; */
-    /* max-width: 200%; */
 }
 
 #menu-splash h2 {
@@ -195,7 +183,7 @@ a {
     stroke-width: 999px;
 }
 
-#toasttab-button, #reservation-button {
+#toasttab-button {
     justify-self: center;
     height: 1em;
     border: 2px solid black;
@@ -235,18 +223,17 @@ a {
     z-index: 1;
     transform: translateX(-55%);
     overflow: clip;
-    /* right: 75vw; */
-    /* z-index: -55; */
 }
 
 #coming-soon {
-    display: none;
+    position: fixed;
+    width: 100vw;
+    top: 45%;
+    left: 0%;
     text-align: center;
-    margin-top: 15vh;
 }
 
 h1 {
-    font-family: 'Fraunces';
     font-size: 3em;
     line-height: 0.5em;
 }
@@ -261,12 +248,27 @@ h3 {
     font-size: 0.9em;
 }
 
-footer {
-    display: none;
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.social-icon {
+    height: 2.5em;
+    padding: 10px;
+}
+
+#bottombar {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    height: 20px;
     width: 100%;
-    height: 5%;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    max-width: 700px;
+    height: 8%;
+    bottom: 0%;
+    z-index: 2;
 }
