@@ -52,7 +52,7 @@ main {
     margin: 2% 0;
     font-size: 1.5em;
     z-index: 6;
-}    
+}
 
 svg {
     position: relative;
@@ -231,10 +231,21 @@ a {
     user-select: none;
 }
 
+#menu-options {
+    transform: translateY(-2em);
+    display: flex;
+    justify-content: space-around;
+}
+
+#menu-options a {
+    color: black;
+    font-size: 1.5em;
+}
+
 #coming-soon {
     position: fixed;
     background-color: hsla(0, 0%, 0%, 0.5);
-    width: 40%;
+    width: 25%;
     height: 27em;
     top: 40%;
     margin: 0 auto;
@@ -251,12 +262,12 @@ a {
 }
 
 #fig1 {
-    transform: translateX(-80%);
+    transform: translateX(-90%) translateY(-9%)
 
 }
 
 #fig2 {
-    transform: translateX(-20%) translateY(-60%);
+    transform: translateX(-25%) translateY(-65%);
 }
 #fig3 {
     transform: translateX(40%) translateY(-120%);
@@ -292,7 +303,7 @@ h3 {
     display: flex;
     justify-content: space-around;
     padding: 5px;
-    height: 20px;
+    height: 5em;
     width: 100%;
     color: white;
 }
@@ -302,7 +313,7 @@ footer {
     background-color: black;
     width: 100%;
     max-width: 700px;
-    height: 8%;
+    height: 6em;
     bottom: 0%;
     z-index: 2;
 }
