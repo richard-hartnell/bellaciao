@@ -233,11 +233,39 @@ a {
 
 #coming-soon {
     position: fixed;
-    width: 100vw;
-    top: 45%;
-    left: 0%;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    width: 40%;
+    height: 27em;
+    top: 40%;
+    margin: 0 auto;
     text-align: center;
+    color: var(--cream)
 }
+
+#coming-soon img {
+    border-color: var(--green);
+    border-width: 5px;
+    border-style: solid;
+    position: relative;
+    height: 10em;
+}
+
+#fig1 {
+    transform: translateX(-80%);
+
+}
+
+#fig2 {
+    transform: translateX(-20%) translateY(-60%);
+}
+#fig3 {
+    transform: translateX(40%) translateY(-120%);
+
+}
+#fig4 {
+    transform: translateX(90%) translateY(-190%);
+}
+
 
 h1 {
     font-size: 3em;
