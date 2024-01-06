@@ -9,23 +9,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://www.bellaciao.bar" />
 </head>
-<div class="gutter gutter-left"></div>
-<div class="gutter gutter-right"></div>
+
 <body>
+    <div class="gutter gutter-left"></div>
+    <div class="gutter gutter-right"></div>
     <main>
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-            <polygon points="0,0 60,100 100,0" />
-        </svg>
-        <img id="bg-pizza" src="./images/pizza-topdown-bg.webp" draggable="false"/>
-        <figure id="time-place">
-            <h3>1427 Railroad Av.<br>Bellingham, WA<br><br>5P - 12A every day</h3>
-            <img src="./images/green-oval-splash.png" draggable="false">
-            <img id="toplogo" src="./images/Bella-Logo-Word-angle-blk_600px.png" draggable="false">
-        </figure>
-        <a href="https://www.toasttab.com/admiralty-lounge-100-n-commercial-st/v3" id="toasttab-button" data-initialized="true" class="frontpage-button"> <!-- remove display tag to activate --> 
-            To-Go & Delivery
-        </a>
-        <section id="coming-soon">
+        <div id="top-chunk">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon points="0,0 60,100 100,0" />
+            </svg>
+            <img id="bg-pizza" src="./images/pizza-topdown-bg.webp" draggable="false"/>
+            <figure id="time-place">
+                <h3>1427 Railroad Av.<br>Bellingham, WA<br><br>5P - 12A every day</h3>
+                <img src="./images/green-oval-splash.png" draggable="false">
+                <img id="toplogo" src="./images/Bella-Logo-Word-angle-blk_600px.png" draggable="false">
+            </figure>
+            <a href="https://www.toasttab.com/admiralty-lounge-100-n-commercial-st/v3" id="toasttab-button" data-initialized="true" class="frontpage-button"> <!-- remove display tag to activate --> 
+                To-Go & Delivery
+            </a>
+        </div>
+        <section id="shaded-marquis">
             <div id="menu-options">
                 <a href="#">Menu</a>
                 <a href="#">About</a>
@@ -62,4 +65,7 @@
         </footer>
     </main>
 </body>
+<script>
+    document.getElementById('shaded-marquis').style.opacity = '1'
+</script>
 </html>

@@ -11,16 +11,12 @@
     src: url("Fraunces_72pt-Bold.ttf") format("truetype");
 }
 
-html, body {
-    margin: 0;
-}
-
 html {
     background-color: var(--green);
     margin: auto;
 }
 
-body, main, footer, #coming-soon {
+body, main, footer, #shaded-marquis {
     min-width: 700px;
 }
 
@@ -28,7 +24,7 @@ body {
     align-self: center;
     margin: auto;
     font-family: 'Fraunces';
-    min-height: 700px;
+    min-height: 100%;
 }
 
 main {
@@ -162,7 +158,7 @@ a {
 .gutter {
     position: absolute;
     top: 0;
-    z-index: -22; /* this stays */
+    z-index: -22;
     background-image:
     linear-gradient(45deg, #ccc 25%, transparent 25%), 
     linear-gradient(135deg, #ccc 25%, transparent 25%),
@@ -183,8 +179,6 @@ a {
 .gutter-right {
     right: 0;
     background-color: var(--green);
-    stroke: black;
-    stroke-width: 999px;
 }
 
 #toasttab-button {
@@ -241,18 +235,21 @@ a {
     font-size: 1.5em;
 }
 
-#coming-soon {
+#shaded-marquis {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
     position: absolute;
+    margin-top: 500%;
     background-color: hsla(0, 0%, 0%, 0.5);
     width: 25%;
-    height: 29em;
+    height: 450px;
     top: 40%;
     margin: 0 auto;
     text-align: center;
     color: var(--cream)
 }
 
-#coming-soon img {
+#shaded-marquis img {
     border-color: var(--green);
     border-width: 5px;
     border-style: solid;
@@ -265,20 +262,19 @@ figure {
 }
 
 #fig1 {
-    transform: translateX(-15%) translateY(-20%)
+    transform: translateX(-15%) translateY(-25%)
 }
 
 #fig2 {
     transform: translateX(50%) translateY(40%);
 }
 #fig3 {
-    transform: translateX(100%) translateY(90%);
-
+    transform: translateX(100%) translateY(80%);
 }
+
 #fig4 {
-    transform: translateX(164%) translateY(145%);
+    transform: translateX(165%) translateY(102%);
 }
-
 
 h1 {
     font-size: 3em;
@@ -314,7 +310,7 @@ footer {
     background-color: black;
     width: 100%;
     max-width: 700px;
-    height: 6em;
+    height: 80px;
     bottom: 0%;
     z-index: 2;
 }
