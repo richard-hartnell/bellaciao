@@ -24,13 +24,14 @@ html, body {
 
 body {
     align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: auto;
     font-family: 'Fraunces';
     position: relative;
     top: 0;
     bottom: 0;
-    /* display: flex; */
-    /* flex-direction: column; */
     min-height: 100%;
 }
 
@@ -39,7 +40,6 @@ body, main, footer, #shaded-marquis {
 }
 
 main {
-    max-width: 700px;
     min-height: 100%;
     align-self: center;
     margin: auto;
@@ -52,19 +52,21 @@ main {
 
 #toasttab-button {
     position: relative;
-    top: -5%;
+    top: -2em;
     left: 10%;
-    border: 2px solid seashell;
-    border-radius: 5%;
-    padding: 1em 0;
     margin: 2% 0;
-    z-index: 6;
+    height: 1em;
+    border: 2px solid black;
+    border-radius: 5%;
+    color: black;
+    font-size: 1.5em;
+    padding: 15px;
 }
 
 svg {
     position: absolute;
     top: 0;
-    width: 700px;
+    width: 100%;
     height: 250px;
     fill: var(--red);
     z-index: 3;
@@ -98,88 +100,6 @@ a {
     font-size: 1.2em;
     text-align: center;
     margin: 18% auto;
-}
-
-#menu-splash {
-    position: fixed;
-    top: 10%;
-    left: 49%;
-    height: 80%;
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222);
-}
-
-#menu-splash h2 {
-    font-family: 'Fraunces';
-    position: absolute;
-    font-size: 4vw;
-    text-align: center;
-    margin: 25% 25%;
-    max-width: 25vw;
-}
-
-#location-splash {
-    position: fixed;
-    top: 60%;
-    left: 15%;
-    width: 25vw;
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222);
-}
-
-#location-splash img {
-    transform: rotate(90deg);
-    max-width: 100%;
-}
-
-#location-splash h2 {
-    font-family: 'Fraunces';
-    position: absolute;
-    font-size: 2.5vw;
-    text-align: center;
-    margin: 46% 20%;
-    transform: translateX(-5%);
-    max-width: 25vw;
-}
-
-.gutter {
-    position: fixed;
-    top: 0;
-    z-index: -22;
-    background-image:
-    linear-gradient(45deg, #ccc 25%, transparent 25%), 
-    linear-gradient(135deg, #ccc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ccc 75%),
-    linear-gradient(135deg, transparent 75%, #ccc 75%);
-    background-size:50px 50px; /* Must be a square */
-    background-position:0 0, 26px 0, 25px -24px, 0px 25px; /* Must be half of one side of the square */    
-    width: 450px;
-    max-width: 50%;
-    /* height: 100%; */
-}
-
-.gutter-left {
-    left: 0;
-    background-color: var(--red);
-}
-
-.gutter-right {
-    right: 0;
-    background-color: var(--green);
-}
-
-#toasttab-button {
-    justify-self: center;
-    height: 1em;
-    border: 2px solid black;
-    border-radius: 5%;
-    color: black;
-    padding: 1em 0;
-    margin: 2% 0;
-    font-size: 1.5em;
-    white-space: nowrap;
-    margin: 10px;
-    padding: 15px;
 }
 
 #topbar {
@@ -230,14 +150,15 @@ a {
     margin-top: 500%;
     background-color: hsla(0, 0%, 0%, 0.5);
     width: 25%;
-    height: 40%;
-    bottom: 15%;
+    height: 50%;
+    top: 35%;
     margin: 0 auto;
     text-align: center;
     color: var(--cream)
 }
 
 #shaded-marquis img {
+
     border-color: var(--green);
     border-width: 5px;
     border-style: solid;
@@ -279,12 +200,41 @@ h3 {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     flex-shrink: 0;
     background-color: black;
     width: 100%;
-    max-width: 700px;
+    left: 0;
+    overflow: hidden;
     height: 80px;
     bottom: 0%;
     z-index: 2;
+}
+
+.gutter {
+    flex: 1 0 0;
+    height: 100%;
+    background-image:
+    linear-gradient(45deg, #ccc 25%, transparent 25%), 
+    linear-gradient(135deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(135deg, transparent 75%, #ccc 75%);
+    background-size:50px 50px; /* Must be a square */
+    background-position:0 0, 26px 0, 25px -24px, 0px 25px; /* Must be half of one side of the square */    
+    width: 450px;
+    max-width: 50%;
+}
+
+.gutter-left {
+    left: 0;
+    background-color: var(--red);
+}
+
+.gutter-right {
+    right: 0;
+    background-color: var(--green);
+}
+
+@media only screen and (orientation: landscape) {
+
 }
