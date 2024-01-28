@@ -68,9 +68,18 @@ svg {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 250px;
+    height: 14em;
     fill: var(--red);
     z-index: 3;
+}
+
+#toplogo {
+    position: relative;
+    right: -22em;
+    top: -6em;
+    transform: rotate(-22deg);
+    height: 200%;
+    z-index: 30;
 }
 
 a {
@@ -103,24 +112,6 @@ a {
     margin: 18% auto;
 }
 
-#topbar {
-    position: absolute;
-    display: none;
-    top: 0px; left: 0px;
-    height: 20px;
-    width: 100%;
-    background-color: black;
-}
-
-#toplogo {
-    position: relative;
-    right: -150%;
-    top: -90px;
-    transform: rotate(-25deg);
-    height: 200%;
-    z-index: 30;
-}
-
 #bg-pizza {
     position: fixed;
     height: 700px;
@@ -148,7 +139,6 @@ a {
     opacity: 0;
     transition: opacity 0.4s ease-in;
     position: absolute;
-    margin-top: 500%;
     background-color: hsla(0, 0%, 0%, 0.5);
     width: 25%;
     height: 40%;
@@ -236,6 +226,29 @@ footer {
     background-color: var(--green);
 }
 
-@media only screen and (orientation: landscape) {
+/* @media only screen and (max-width: 699px) {
+    body, main, footer, #shaded-marquis {
+    min-width: 100%;
+    width: 100%;
+    }
+    #bg-pizza {
+        position: fixed;
+        height: 700px;
+        width: auto;
+        top: -27%;
+        transform: translateX(40.9%);
+        z-index: 1;
+        overflow: clip;
+        user-select: none;
+    }
 
-}
+    #toplogo {
+        position: relative;
+        right: -135%;
+        top: -95px;
+        transform: rotate(-27deg);
+        height: 200%;
+        z-index: 30;
+    }
+
+} */
