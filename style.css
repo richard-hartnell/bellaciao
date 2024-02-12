@@ -41,7 +41,6 @@ body, main, footer, #shaded-marquis {
 }
 
 main {
-
     align-self: center;
     margin: auto;
     position: absolute;
@@ -116,7 +115,7 @@ a {
     position: fixed;
     height: 700px;
     width: auto;
-    top: -354px;
+    top: -380px;
     transform: translateX(40.9%);
     z-index: 1;
     overflow: clip;
@@ -141,15 +140,22 @@ a {
     position: absolute;
     background-color: hsla(0, 0%, 0%, 0.5);
     width: 25%;
-    height: 40%;
-    top: 44%;
+    min-height: 50%;
+    top: 40%;
     margin: 0 auto;
     text-align: center;
     color: var(--cream)
 }
 
-#shaded-marquis img {
+#marquis-contents section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
 
+#shaded-marquis img {
     border-color: var(--green);
     border-width: 5px;
     border-style: solid;
@@ -226,29 +232,10 @@ footer {
     background-color: var(--green);
 }
 
-/* @media only screen and (max-width: 699px) {
-    body, main, footer, #shaded-marquis {
-    min-width: 100%;
-    width: 100%;
-    }
-    #bg-pizza {
-        position: fixed;
-        height: 700px;
-        width: auto;
-        top: -27%;
-        transform: translateX(40.9%);
-        z-index: 1;
-        overflow: clip;
-        user-select: none;
+@media only screen and (orientation: landscape) {
+    #shaded-marquis {
+        top: 40%;
+        height: 25%;
     }
 
-    #toplogo {
-        position: relative;
-        right: -135%;
-        top: -95px;
-        transform: rotate(-27deg);
-        height: 200%;
-        z-index: 30;
-    }
-
-} */
+}
