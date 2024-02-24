@@ -28,10 +28,10 @@
         </a>
         <section id="shaded-marquis">
             <div id="menu-options">
-                <a href="#">Menu</a>
-                <a href="#">About</a>
-                <a href="#">Something</a>
-                <a href="#">Look Inside</a>
+                <a href="#" id="menu-menu" onclick="showMenu('menu'); return false;">Menu</a>
+                <a href="#" id="menu-about" onclick="showMenu('about'); return false;">About</a>
+                <a href="#" id="menu-something" onclick="showMenu('something'); return false;">Something</a>
+                <a href="#" id="menu-inside" onclick="showMenu('inside'); return false;">Look Inside</a>
             </div>
             <div id="marquis-contents">
                 <section id="menu">
@@ -50,7 +50,7 @@
                 <section id="something" style="display: none">
                     Here's the something section.
                 </section>
-                <section id="look-inside" style="display: none">
+                <section id="inside" style="display: none">
                     Here's the look inside section.
                 </section>
             </div>
@@ -72,7 +72,5 @@
         </footer>
     </main>
 </body>
-<script>
-    document.getElementById('shaded-marquis').style.opacity = '1'
-</script>
+<script src="index.js" defer></script>
 </html>
