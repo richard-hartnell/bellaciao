@@ -118,6 +118,19 @@ a {
     user-select: none;
 }
 
+.outline { 
+    shape-outside: url( 
+"images/pizza-topdown-bg.webp"
+); 
+
+    background: url( 
+"images/pizza-topdown-bg.webp"
+) no-repeat; 
+    width: 150px; 
+    height: 150px; 
+    float: left;
+}
+
 #menu-options {
     position: relative;
     top: -2em;
