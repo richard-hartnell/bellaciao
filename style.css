@@ -46,17 +46,24 @@ main {
     background-image: linear-gradient(165deg, var(--green), var(--cream), var(--red));
 }
 
-#toasttab-button {
+.frontpage-button {
     position: relative;
-    top: -2em;
-    left: 10%;
     margin: 2% 0;
-    height: 1em;
+    height: 0.8em;
     border: 2px solid black;
     border-radius: 5%;
     color: black;
     font-size: 1.5em;
     padding: 15px;
+    left: 10%;
+}
+
+#toasttab-button {
+    top: -4em;
+}
+
+#toasttab-button-2 {
+    top: -4em;
 }
 
 svg {
@@ -130,7 +137,6 @@ a {
     height: 150px; 
     float: left;
 }
-
 #menu-options {
     position: relative;
     top: -2em;
@@ -150,7 +156,7 @@ a {
     background-color: hsla(0, 0%, 0%, 0.5);
     width: 25%;
     min-height: 50%;
-    top: 40%;
+    top: 43%;
     text-align: center;
     color: var(--cream)
 }
@@ -216,9 +222,15 @@ h3 {
 #bottombar {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    /* padding: 5px; */
     min-width: 650px;
     color: white;
+}
+
+#bottombar hours {
+    line-height: 0em;
+    padding: 0;
+    margin: 0;
 }
 
 footer {
@@ -263,4 +275,15 @@ footer {
         height: 25%;
     }
 
+}
+
+@media only screen and (aspect-ratio < 0.6) {
+    body {
+        /* display: none; */
+    }
+
+    #shaded-marquis {
+        top: 35%;
+        min-height: 50%;
+    }
 }
