@@ -37,8 +37,8 @@ function showMenu(menuId) {
       inside.style.display = 'none';
       menu1.style.fontWeight = 'normal';
       menu2.style.fontWeight = 'normal';
-      menu3.style.fontWeight = 'normal';
-      menu4.style.fontWeight = 'bold';
+      menu3.style.fontWeight = 'bold';
+      menu4.style.fontWeight = 'normal';
       menu5.style.fontWeight = 'normal';
     } else if (menuId === 'inside') {
       about.style.display = 'none';

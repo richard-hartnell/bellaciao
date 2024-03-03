@@ -48,14 +48,14 @@ main {
 
 .frontpage-button {
     position: relative;
-    margin: 2% 0;
     height: 0.8em;
     border: 2px solid black;
     border-radius: 5%;
     color: black;
     font-size: 1.5em;
-    padding: 15px;
+    padding: 10px;
     left: 10%;
+    z-index: 10;
 }
 
 #buttons {
@@ -86,7 +86,7 @@ svg {
     top: -6em;
     transform: rotate(-22deg);
     height: 200%;
-    z-index: 30;
+    z-index: 10;
 }
 
 a {
@@ -152,6 +152,7 @@ a {
 #menu-options a {
     color: black;
     font-size: 1.5em;
+    padding-top: 5px;
 }
 
 #shaded-marquis {
@@ -177,7 +178,7 @@ a {
     max-height: 99%;
     margin-bottom: 10px;
     overflow-y: scroll;
-    scrollbar-width: thin;
+    /* scrollbar-width: thin; */
     scrollbar-color: brown transparent;
 }
 
@@ -197,8 +198,21 @@ a {
 #marquis-contents h2 {
     color: white;
     text-shadow: 3px 3px 10px black;
+    line-height: 0.7em;
 }
 
+#pizza img {
+    float: right;
+    top: 0;
+    height: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+#drinks h3 {
+    line-height: 2em;
+    
+}
 
 #inside {
     /* padding-bottom: 10px; */
@@ -234,13 +248,13 @@ h3 {
 
 .social-icon {
     height: 2.5em;
-    padding: 10px;
+    padding: 12% 10px;
 }
 
 #bottombar {
     display: flex;
     justify-content: space-between;
-    /* padding: 5px; */
+    margin-bottom: 5px;
     min-width: 650px;
     color: white;
 }
@@ -250,6 +264,7 @@ h3 {
     top: -1em;
     margin: 0;
     font-size: 1em;
+    line-height: 1.1em;
 }
 
 #hours a {
@@ -258,7 +273,6 @@ h3 {
 
 footer {
     position: fixed;
-    flex-shrink: 0;
     background-color: black;
     min-width: 700px;
     align-self: center;
@@ -266,6 +280,12 @@ footer {
     height: 80px;
     bottom: 0%;
     z-index: 2;
+    font-size: 1.1em;
+    padding-top: 10px;
+}
+
+#footer-address {
+    padding-left: 5px;
 }
 
 .gutter {
@@ -300,16 +320,101 @@ footer {
 
 }
 
-@media only screen and (aspect-ratio < 0.6) {
-    body {
-        width: 100%;
-    }
-    main {
-        width: 100%;
+@media only screen and (aspect-ratio < 0.6) and (max-width: 500px) {
+    body, main, footer, html, #shaded-marquis, footer, #bottombar {
+        min-width: 100%;
     }
 
-    /* #shaded-marquis {
-        top: 35%;
-        min-height: 50%;
-    } */
+    .frontpage-button {
+        position: relative;
+        margin: 2% 0;
+        height: 0.8em;
+        border: 2px solid black;
+        border-radius: 5%;
+        color: black;
+        font-size: 1.5em;
+        padding: 8px;
+        left: 6%;
+    }
+
+    #toasttab-button {
+        top: -3em;
+        align-content: center;
+    }
+    
+    #toasttab-button-2 {
+        top: -3em;
+    }
+
+    #bg-pizza {
+        transform: translateX(30vw);
+   
+    }
+
+    #toplogo {
+        right: -73%;
+        transform: rotate(-40deg);
+        top: -10;
+        width: 80%;
+        height: auto;
+    }
+
+    #shady-spacer {
+        height: 6em;
+    }
+
+    #marquis-contents h3 {
+        max-width: 85%;
+    }
+
+    #time-place {
+        left: -50px;
+    }
+
+    #shaded-marquis {
+        top: 41%;
+
+    }
+
+    .social-icon {
+        height: 2em;
+        padding: 25% 3px 25%;
+    }
+
+}
+
+@media only screen and (aspect-ratio < 0.5) and (max-width: 500px) {
+
+    #bg-pizza {
+        transform: translateX(30vw);
+    }
+
+    #toplogo {
+        right: -50vw;
+        transform: rotate(-39deg);
+    }
+
+}
+
+@media only screen and (aspect-ratio < 0.47) and (max-width: 500px) {
+    #toplogo {
+        right: -75%
+        transform: rotate(-38deg);
+    }
+}
+
+@media only screen and (width < 380px) {
+    footer {
+        font-size: 1em;
+    }
+
+    #menu-options a {
+        font-size: 1.25em;
+        padding-top: 5px;
+    }
+}
+
+#coming-soon {
+    margin: 0 auto;
+    text-align: center;
 }
