@@ -58,8 +58,13 @@ main {
     left: 10%;
 }
 
+#buttons {
+    margin: 0 auto;
+}
+
 #toasttab-button {
     top: -4em;
+    align-content: center;
 }
 
 #toasttab-button-2 {
@@ -182,6 +187,19 @@ a {
     position: relative;
 }
 
+#marquis-contents h3 {
+    font-size: 1.1em;
+    max-width: 75%;
+    margin: 0 auto;
+    text-shadow: 3px 3px 10px black;
+}
+
+#marquis-contents h2 {
+    color: white;
+    text-shadow: 3px 3px 10px black;
+}
+
+
 #inside {
     /* padding-bottom: 10px; */
     justify-content: center;
@@ -227,10 +245,15 @@ h3 {
     color: white;
 }
 
-#bottombar hours {
-    line-height: 0em;
-    padding: 0;
+#hours {
+    position: relative;
+    top: -1em;
     margin: 0;
+    font-size: 1em;
+}
+
+#hours a {
+    color: var(--yellow);
 }
 
 footer {
@@ -279,11 +302,14 @@ footer {
 
 @media only screen and (aspect-ratio < 0.6) {
     body {
-        /* display: none; */
+        width: 100%;
+    }
+    main {
+        width: 100%;
     }
 
-    #shaded-marquis {
+    /* #shaded-marquis {
         top: 35%;
         min-height: 50%;
-    }
+    } */
 }
