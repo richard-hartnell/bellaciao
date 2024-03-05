@@ -398,7 +398,7 @@ footer {
 
 @media only screen and (aspect-ratio < 0.47) and (max-width: 500px) {
     #toplogo {
-        right: -75%
+        right: -88%;
         transform: rotate(-38deg);
     }
 }
@@ -406,6 +406,10 @@ footer {
 @media only screen and (width < 380px) {
     footer {
         font-size: 1em;
+    }
+
+    #toplogo {
+        right: -77%;
     }
 
     #menu-options a {
