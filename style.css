@@ -14,7 +14,6 @@
 html {
     background-color: var(--green);
     overflow: hidden;
-    /* bottom: 0px; */
 }
 
 body {
@@ -178,7 +177,6 @@ a {
     max-height: 99%;
     margin-bottom: 10px;
     overflow-y: scroll;
-    /* scrollbar-width: thin; */
     scrollbar-color: brown transparent;
 }
 
@@ -215,13 +213,12 @@ a {
 }
 
 #inside {
-    /* padding-bottom: 10px; */
     justify-content: center;
     max-height: 90%;
 }
 
 #inside img {
-    width: 625px;
+    max-width: 88%;
     border: 4px double var(--green);
     box-shadow: 1px 1px 6px black;
     padding: 10px;
@@ -229,9 +226,11 @@ a {
 
 #inside figure {
     margin: 0 auto;
-    height: 80%;
+    height: auto;
     padding-top: 5px;
+    max-width: 96%;
 }
+
 
 h1 {
     font-size: 3em;
@@ -269,6 +268,10 @@ h3 {
     margin-left: 17px;
 }
 
+#flavortext {
+    text-align: right;
+}
+
 hr {
     width: 50%;
     align-self: center;
@@ -292,7 +295,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: space-around;
-    /* margin-bottom: 5px; */
     min-width: 650px;
     color: white;
 }
@@ -302,7 +304,6 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    /* background-color: yellow; */
     padding-top: 5px;
     padding-left: 5px;
 }
@@ -326,8 +327,6 @@ footer {
     max-width: 50%;
 }
 
-
-
 .gutter-left {
     left: 0;
     background-color: var(--red);
@@ -343,7 +342,6 @@ footer {
         top: 40%;
         height: 25%;
     }
-
 }
 
 @media only screen and (aspect-ratio < 0.6) and (max-width: 500px) {
@@ -419,11 +417,24 @@ footer {
         transform: rotate(-39deg);
     }
 
+    #pizza img {
+        width: 40%;
+    }
+
+    #pizza #flavortext {
+        text-align: left;
+    }
+
+    #pizza p {
+        text-align: center;
+        padding: 0 2.5em;
+    }
+
 }
 
 @media only screen and (aspect-ratio < 0.47) and (max-width: 500px) {
     #toplogo {
-        right: -88%;
+        /* right: -88%; */
         transform: rotate(-38deg);
     }
 }
@@ -433,17 +444,16 @@ footer {
         font-size: 1em;
     }
 
+    body, main, footer, html, #shaded-marquis, footer, #bottombar {
+        overflow-x: hidden;
+    }
+
     #toplogo {
-        right: -77%;
+        /* right: -77%; */
     }
 
     #menu-options a {
         font-size: 1.25em;
         padding-top: 5px;
     }
-}
-
-#coming-soon {
-    margin: 0 auto;
-    text-align: center;
 }
