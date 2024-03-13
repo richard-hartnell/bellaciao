@@ -68,6 +68,8 @@ main {
 
 #toasttab-button-2 {
     top: -4em;
+    color: gray;
+    border: 2px solid gray;
 }
 
 svg {
@@ -146,7 +148,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    z-index: 99;
+    z-index: 3;
     background: black;
     color: var(--cream);
     margin: auto 0;
@@ -164,8 +166,8 @@ a {
     position: absolute;
     background-color: hsla(0, 0%, 0%, 0.5);
     width: 25%;
-    min-height: 50%;
-    top: 43%;
+    min-height: 60%;
+    top: 33%;
     text-align: center;
     color: var(--cream)
 }
@@ -174,7 +176,7 @@ a {
     position: absolute;
     width: 100%;
     top: 2em;
-    max-height: 99%;
+    max-height: 95%;
     margin-bottom: 10px;
     overflow-y: scroll;
     scrollbar-color: brown transparent;
@@ -286,7 +288,7 @@ footer {
     overflow: hidden;
     height: 80px;
     bottom: 0%;
-    z-index: 2;
+    z-index: 3;
     font-size: 1.1em;
     padding-top: 10px;
 }
