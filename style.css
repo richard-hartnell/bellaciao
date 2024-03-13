@@ -143,15 +143,19 @@ a {
 }
 #menu-options {
     position: relative;
-    top: -2em;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    z-index: 99;
+    background: black;
+    color: var(--cream);
+    margin: auto 0;
 }
 
 #menu-options a {
-    color: black;
+    color: var(--cream);
     font-size: 1.5em;
-    padding-top: 5px;
+    padding: 5px 0 5px 0;
 }
 
 #shaded-marquis {
@@ -166,14 +170,10 @@ a {
     color: var(--cream)
 }
 
-#marquis-contents {
-    max-height: 100%;
-}
-
 #marquis-contents section {
     position: absolute;
     width: 100%;
-    top: 1%;
+    top: 2em;
     max-height: 99%;
     margin-bottom: 10px;
     overflow-y: scroll;
@@ -382,7 +382,7 @@ footer {
         height: auto;
     }
 
-    #shady-spacer {
+    .shady-spacer {
         height: 6em;
     }
 
