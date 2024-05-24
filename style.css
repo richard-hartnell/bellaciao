@@ -69,8 +69,7 @@ main {
 
 #toasttab-button-2 {
     top: -4em;
-    color: gray;
-    border: 2px solid gray;
+    border: 2px solid black;
 }
 
 svg {
