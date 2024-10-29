@@ -251,14 +251,14 @@ h3 {
 
 .social-icon {
     height: 2.5em;
-    padding: 12% 10px;
+    padding: 12% 3px;
 }
 
 #hours {
     position: relative;
     top: -1em;
     margin: 0;
-    font-size: 1em;
+    font-size: 0.75em;
     line-height: 1.1em;
 }
 
@@ -403,7 +403,11 @@ footer {
 
     .social-icon {
         height: 2em;
-        padding: 25% 3px 25%;
+        padding: 5% 3px 25%;
+    }
+
+    #footerbreak {
+        display: none;
     }
 
 }
